@@ -1,8 +1,8 @@
 #!/bin/bash
-path=$(readlink -e $0)
-ssh nuhazet.arkania.es "
-  cd $(dirname $path)
+
+ssh nuhazet@nuhazet.arkania.es "
+  cd  travelroad_express
   git pull
   npm install
-  pm2 restart travelroad --update-env
+  pm2 restart travelroad_express --update-env
 "
